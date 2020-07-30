@@ -16,6 +16,8 @@ import colors from './src/styles/colors';
 
 const Stack = createStackNavigator();
 
+
+
 export default class App extends Component{
   render(){
     return(
@@ -26,13 +28,8 @@ export default class App extends Component{
                 <Stack.Navigator
                     screenOptions={({navigation}) => ({
                         headerStyle: {
-                            backgroundColor: colors.appColor,
+                            backgroundColor: '#3DABFF',
                         },
-                        headerLeft: () => (
-                            <TouchableOpacity onPress={() => navigation.goBack()}>
-                                <Text>Geri</Text>
-                            </TouchableOpacity>
-                        ),
                         headerTintColor: '#fff',
                         headerTitleAlign: 'center'
                     })}
@@ -41,7 +38,8 @@ export default class App extends Component{
                     <Stack.Screen
                         name='LoginPage'
                         options={{
-                            title: 'Login'
+                            title: 'Login',
+                            headerLeft:false
                         }}
                         component={LoginPage}/>
 
