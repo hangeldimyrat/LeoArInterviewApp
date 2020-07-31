@@ -31,12 +31,6 @@ class UsersListPage extends Component{
     render(){
         return(
             <View style={styles.usersListContainer}>
-                <View style={styles.userSearchView}>
-                    <Text>Ara</Text>
-                    <TextInput
-                        placeholder='kullanıcı bul...'
-                        style={styles.userSearchInput}/>
-                </View>
                 {
                     this.renderUsersList()
                 }

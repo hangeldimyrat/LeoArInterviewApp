@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import Icon from 'react-native-vector-icons/Feather';
 
 import styles from '../styles/ChatPageStyle';
 
@@ -40,14 +41,14 @@ class ChatPage extends Component{
                 }
                 <View style={styles.messageArea}>
                     <TouchableOpacity style={styles.addImage}>
-                        <Text>icon</Text>
+                        <Icon name='image' size={30} color='#9c9c9c'/>
                     </TouchableOpacity>
                     <TextInput
                         placeholder='Mesaj yaz...'
                         multiline
                         style={styles.messageInput}/>
                     <TouchableOpacity style={styles.sendButton}>
-                        <Text>icon</Text>
+                        <Icon name='arrow-up' size={25} color='#fff'/>
                     </TouchableOpacity>
                 </View>
             </View>

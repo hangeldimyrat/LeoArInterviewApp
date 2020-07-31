@@ -9,7 +9,9 @@ class ChatsListPage extends Component{
     renderChatsList(){
         return(
             <>
-                <TouchableOpacity style={styles.chatContainer}>
+                <TouchableOpacity
+                    onPress={()=>this.props.navigation.navigate('ChatPage')}
+                    style={styles.chatContainer}>
                     <Text style={styles.userAvatar}>MA</Text>
                     <View style={styles.chatDetails}>
                         <Text style={styles.userName}>Mehmet Arif</Text>

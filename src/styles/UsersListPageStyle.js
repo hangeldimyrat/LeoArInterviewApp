@@ -7,7 +7,8 @@ const styles = StyleSheet.create({
     usersListContainer:{
         flex:1,
         backgroundColor:'#fff',
-        alignItems:'center'
+        alignItems:'center',
+        paddingTop:10
     },
     userContainer:{
         width:w,
@@ -33,25 +34,6 @@ const styles = StyleSheet.create({
         paddingLeft:10,
         color:'#5f5f5f'
     },
-    userSearchView:{
-        flexDirection: 'row',
-        width: '80%',
-        height:40,
-        marginTop:10,
-        backgroundColor: '#efefef',
-        borderRadius:100,
-        alignItems: 'center',
-        justifyContent:'center',
-        paddingLeft:15,
-        marginBottom:10
-    },
-    userSearchInput:{
-        flex:1,
-        fontSize: 17,
-        color:'#666666',
-        padding:0,
-        paddingLeft:10
-    }
 });
 
 export default styles;
