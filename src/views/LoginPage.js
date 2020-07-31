@@ -31,6 +31,7 @@ class LoginPage extends Component{
                    <Text style={this.state.onFocus ? styles.userNameTextAbsolute : styles.userNameText}>Enter your username</Text>
                    <TextInput
                        style={styles.input}
+                       onEndEditing={()=>this.setState({onFocus:false})}
                        onFocus={()=>this.setState({onFocus:true})}
                    />
                </View>
