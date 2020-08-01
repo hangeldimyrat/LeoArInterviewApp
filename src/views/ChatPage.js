@@ -7,7 +7,13 @@ import styles from '../styles/ChatPageStyle';
 import helper from '../controllers/helper';
 import {observer} from 'mobx-react';
 
-database()
+
+
+class ChatPage extends Component{
+
+
+    componentWillMount(){
+        database()
     .ref(`chatDetails/${helper.name}-${helper.chatUserName}`)
     .on('value',response => {
         let data = response.val()
@@ -19,11 +25,8 @@ database()
             })
         };
         helper.messages = tmp
-        console.log('mesajlar'+JSON.stringify(response.val()))
     })
-
-class ChatPage extends Component{
-
+    }
 
     componentDidUpdate() {
         LayoutAnimation.easeInEaseOut()
