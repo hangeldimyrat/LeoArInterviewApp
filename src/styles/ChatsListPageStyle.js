@@ -1,11 +1,12 @@
 import { StyleSheet } from 'react-native'
+import colors from './colors';
 
 const styles = StyleSheet.create({
     chatsListContainer:{
         flex:1,
-        backgroundColor:'#fff',
         alignItems:'center',
-        paddingTop:10
+        paddingTop:10,
+        backgroundColor:'#fff'
     },
     chatContainer:{
         flexDirection:'row',
@@ -21,7 +22,7 @@ const styles = StyleSheet.create({
         width:55,
         textAlign:'center',
         textAlignVertical:'center',
-        backgroundColor: '#fd64d9',
+        backgroundColor: '#ef40aa',
         color:'#fff',
         borderRadius:100,
         fontSize:18,
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
     },
     chatDetails:{
         height:'100%',
-        flex:1,
+        width:'80%',
         justifyContent:'center',
         borderBottomWidth:1,
         borderBottomColor:'#e3e3e3'
@@ -42,6 +43,30 @@ const styles = StyleSheet.create({
     userMessage:{
         fontSize:13,
         color:'#4e4e4e'
+    },
+    startFirstChat:{
+        fontSize:18,
+        color:'#6d6d6d',
+    },
+    crateNewChatButton:{
+        width:150,
+        marginTop:15,
+        padding:5,
+        backgroundColor:colors.colorApp,
+        borderRadius: 7,
+        alignItems:'center',
+        flexDirection: 'row',
+        justifyContent: 'center'
+    },
+    createNewChatText:{
+        color:'#fff',
+        fontSize:16,
+        marginLeft:5
+    },
+    newChatButton:{
+        width:50,
+        height:50,
+        backgroundColor:colors.colorApp,
     }
 });
 

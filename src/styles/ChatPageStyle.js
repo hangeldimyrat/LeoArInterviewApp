@@ -9,7 +9,7 @@ const styles = StyleSheet.create({
     chatter1Container:{
         width: '100%',
         alignItems:'flex-start',
-        marginBottom:2,
+        marginTop:5,
         flexDirection: 'row',
         paddingLeft:10
     },
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
         width:45,
         textAlign:'center',
         textAlignVertical:'center',
-        backgroundColor: '#fd64d9',
+        backgroundColor: '#ef40aa',
         color:'#fff',
         borderRadius:100,
         fontSize:15,
@@ -33,14 +33,14 @@ const styles = StyleSheet.create({
         paddingRight:10,
         borderRadius: 13,
         backgroundColor: '#ececec',
-        marginTop:5,
         marginLeft:7,
         color:'#282828'
     },
     chatter2Container:{
         width: '100%',
         justifyContent:'flex-end',
-        marginTop:2,
+        marginTop:5,
+        alignItems:'flex-start',
         flexDirection:'row',
         paddingRight:10
     },
@@ -51,17 +51,16 @@ const styles = StyleSheet.create({
         paddingRight:10,
         borderRadius:13,
         backgroundColor: '#418dff',
-        marginTop:5,
         marginRight:7,
         color:'#fff'
     },
     messageArea:{
         width:'100%',
         minHeight:65,
-        backgroundColor:'#fff',
-        position:'absolute',
-        bottom:0,
+        backgroundColor:'#f5f5f5',
         paddingBottom:10,
+        paddingTop:5,
+        marginTop:7,
         flexDirection:'row',
         alignItems:'flex-end',
         justifyContent:'space-between',

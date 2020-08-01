@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "759600314918",
+    "firebase_url": "https://leoarinterviewapp-d3c35.firebaseio.com",
+    "project_id": "leoarinterviewapp-d3c35",
+    "storage_bucket": "leoarinterviewapp-d3c35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:759600314918:android:60a8f3eb75ee85d21084e7",
+        "android_client_info": {
+          "package_name": "com.leoarinterviewapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "759600314918-kkc4a0to0lfbqkb6qfh88j0hbc8bok41.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-r6PO37jD0MuRm5myMo9o3cTiKu9xOjo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "759600314918-kkc4a0to0lfbqkb6qfh88j0hbc8bok41.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

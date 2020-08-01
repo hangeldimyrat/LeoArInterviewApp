@@ -1,29 +1,48 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from "react-native";
+import { View, Text, TextInput, TouchableOpacity, FlatList } from "react-native";
+import database from '@react-native-firebase/database';
+import { observer } from 'mobx-react';
+
 
 import styles from '../styles/UsersListPageStyle';
+import helper from '../controllers/helper';
+
 
 class UsersListPage extends Component{
 
-    renderUsersList(){
+    componentWillMount=async()=> {
+        await database()
+            .ref('users')
+            .once('value')
+            .then(response => {
+                const tmp = []
+                for(let i in response.val()){
+                    tmp.push({
+                        user: response.val()[i]
+                    })
+                }
+                helper.users = tmp
+            });
+    }
+
+    routeToChat(item){
+        helper.chatUserName = item
+        this.props.navigation.navigate('ChatPage')
+    }
+
+    renderUsersList(item){
         return(
             <>
-                <TouchableOpacity style={styles.userContainer}>
-                    <Text style={styles.userAvatar}>MY</Text>
-                    <Text style={styles.userName}>Mehmet Yavuz</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.userContainer}>
-                    <Text style={styles.userAvatar}>ZK</Text>
-                    <Text style={styles.userName}>Zafer Kaplan</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.userContainer}>
-                    <Text style={styles.userAvatar}>AY</Text>
-                    <Text style={styles.userName}>Alev Yılmaz</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.userContainer}>
-                    <Text style={styles.userAvatar}>MA</Text>
-                    <Text style={styles.userName}>Murat Artan</Text>
-                </TouchableOpacity>
+                {
+                    helper.name !== item.user.name&&
+                    <TouchableOpacity
+                        onPress={()=> this.routeToChat(item.user.name)}
+                        style={styles.userContainer}
+                    >
+                        <Text style={styles.userAvatar}>{item.user.name.charAt(0)+item.user.name.charAt(1).toUpperCase()}</Text>
+                        <Text style={styles.userName}>{item.user.name}</Text>
+                    </TouchableOpacity>
+                }
             </>
         )
     }
@@ -32,11 +51,14 @@ class UsersListPage extends Component{
         return(
             <View style={styles.usersListContainer}>
                 {
-                    this.renderUsersList()
+                    <FlatList
+                        data={helper.users}
+                        renderItem={item => this.renderUsersList(item.item)}
+                    />
                 }
             </View>
         )
     }
 };
 
-export default UsersListPage;
+export default observer(UsersListPage);
