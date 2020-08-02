@@ -1,5 +1,4 @@
 import { StyleSheet } from 'react-native'
-import colors from './colors';
 
 const styles = StyleSheet.create({
     chatsListContainer:{
@@ -52,7 +51,7 @@ const styles = StyleSheet.create({
         width:150,
         marginTop:15,
         padding:5,
-        backgroundColor:colors.colorApp,
+        backgroundColor:'#3DABFF',
         borderRadius: 7,
         alignItems:'center',
         flexDirection: 'row',
@@ -66,7 +65,7 @@ const styles = StyleSheet.create({
     newChatButton:{
         width:50,
         height:50,
-        backgroundColor:colors.colorApp,
+        backgroundColor:'#3DABFF',
     }
 });
 

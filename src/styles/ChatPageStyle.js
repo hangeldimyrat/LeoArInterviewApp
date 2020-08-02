@@ -3,7 +3,6 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     chatContainer:{
         flex:1,
-        paddingTop:15,
         backgroundColor:'#fff'
     },
     chatter1Container:{
@@ -31,7 +30,8 @@ const styles = StyleSheet.create({
         padding:5,
         paddingLeft:10,
         paddingRight:10,
-        borderRadius: 13,
+        borderRadius: 7,
+        marginTop:15,
         backgroundColor: '#ececec',
         marginLeft:7,
         color:'#282828'
@@ -49,7 +49,8 @@ const styles = StyleSheet.create({
         padding:5,
         paddingLeft:10,
         paddingRight:10,
-        borderRadius:13,
+        borderRadius:7,
+        marginTop:15,
         backgroundColor: '#418dff',
         marginRight:7,
         color:'#fff'
@@ -60,12 +61,9 @@ const styles = StyleSheet.create({
         backgroundColor:'#f5f5f5',
         paddingBottom:10,
         paddingTop:5,
-        marginTop:7,
         flexDirection:'row',
         alignItems:'flex-end',
         justifyContent:'space-between',
-        borderTopColor:'#e8e8e8',
-        borderTopWidth:1
     },
     addImage:{
         height:40,
@@ -73,7 +71,7 @@ const styles = StyleSheet.create({
         marginLeft:15,
         marginRight:5,
         alignItems:'center',
-        justifyContent:'center'
+        justifyContent:'center',
     },
     messageInput:{
         flex:1,
@@ -90,15 +88,30 @@ const styles = StyleSheet.create({
         maxHeight:175,
         backgroundColor:'#fff'
     },
+    sendLocation:{
+        height:40,
+        width:40,
+        marginLeft:5,
+        marginRight:15,
+        alignItems:'center',
+        justifyContent:'center'
+    },
     sendButton:{
-        width:45,
-        height:45,
+        width:40,
+        height:40,
         borderRadius:100,
         backgroundColor:'#16d0ff',
-        marginLeft: 15,
+        marginLeft: 5,
         marginRight:15,
         justifyContent: 'center',
         alignItems:'center'
+    },
+    map:{
+        width:'100%',
+        height:75,
+        borderRadius:30
+
+
     }
 });
 

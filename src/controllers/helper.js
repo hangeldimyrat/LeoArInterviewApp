@@ -2,15 +2,16 @@ import { observable, action, decorate } from "mobx";
 
 class helper {
 
-    name = ''
+    name = ''      // variable which holds the user name
 
-    users = []
+    users = []     // array which holds all users
 
-    chatUserName = ''
+    chatUserName = ''     // person name who is chatted with
 
-    chatsList = []
+    chatsList = []      // array which holds all previous chats
 
-    messages = []
+    messages = []      // array which holds all messages in a chat dialog
+
 
 }
 
@@ -21,7 +22,7 @@ decorate(
         users:observable,
         chatUserName:observable,
         chatsList:observable,
-        messages:observable
+        messages:observable,
 
     }
 );

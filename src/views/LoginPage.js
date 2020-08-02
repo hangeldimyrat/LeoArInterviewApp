@@ -7,6 +7,7 @@ import styles from '../styles/LoginPageStyle';
 import helper from "../controllers/helper";
 
 
+// in order to enable LayoutAnimation
 if (Platform.OS === 'android') {
     if (UIManager.setLayoutAnimationEnabledExperimental) {
         UIManager.setLayoutAnimationEnabledExperimental(true);
@@ -31,13 +32,13 @@ class LoginPage extends Component{
         }
     }
 
+    // checks if the username length is more than two letters
     userNameCheck=async ()=>{
         if(helper.name.length >= 2) {
             const reference = database().ref(`users/${helper.name}`)
             reference.set({
                 name:helper.name
             })
-
             this.props.navigation.navigate('ChatsListPage')
         }
         else this.setState({showError:true,})
@@ -53,7 +54,7 @@ class LoginPage extends Component{
                        onChangeText={ name => {
                            helper.name = name;
                            if(helper.name.length>=2)this.setState({showError:false})
-                       } }
+                       }}
                        style={styles.input}
                        onEndEditing={()=>{
                            if(helper.name==='')this.setState({onFocus:false, showError: false})
@@ -69,7 +70,7 @@ class LoginPage extends Component{
                     activeOpacity={.8}
                     onPress={()=>this.userNameCheck()}
                     style={styles.loginButton}>
-                    <Text style={styles.loginText}>Giriş yap</Text>
+                    <Text style={styles.loginText}>Log in</Text>
                 </TouchableOpacity>
             </View>
 
